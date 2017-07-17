@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<!--q 1-->
+<button onclick="outerfunction(innerfunction)">click me</button><br><br>
+	
+<!-- q2-->	
+<button type="button" onclick="myFunction()">Count!</button>
+<p id="demo"></p>
+
+<script>
+//q1	
+function outerfunction(Callback) {
+    Callback();
+    
+}
+	function innerfunction() {
+    console.log('Hello World from inner function');
+}
+ </script>  
+<script>	
+	//q2
+var counter = 0;
+
+function add() {
+    return counter += 1;
+}
+
+function myFunction(){
+    document.getElementById("demo").innerHTML = add();
+}
+</script>
+
+</body>
+</html>
